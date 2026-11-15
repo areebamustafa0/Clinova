@@ -251,3 +251,4 @@ Near-black teal backgrounds (`ink-*`), mint accent (`mint-*`) with deep-teal but
 glass panels, hairline borders, generous whitespace and restrained motion (Framer Motion entrance / scroll reveals, reduced-motion respected).
 Photography: generated hero/interior images plus Pexels stock portraits and treatment photos stored in `public/images`.
 "# Clinova" 
+"# Clinova" 
