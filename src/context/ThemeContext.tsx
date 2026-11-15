@@ -6,7 +6,7 @@ export type Theme = "dark" | "light";
 export const THEME_KEY = "theme";
 
 /** Runs before first paint: stored choice, otherwise the visitor's system preference. */
-export const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('${THEME_KEY}');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-scheme',t)}catch(e){}})();`;
+export const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('${THEME_KEY}');if(t!=='light'&&t!=='dark')t='light';document.documentElement.setAttribute('data-scheme',t)}catch(e){document.documentElement.setAttribute('data-scheme','light')}})();`;
 
 type ThemeValue = { theme: Theme; setTheme: (t: Theme) => void; toggle: () => void };
 const ThemeContext = createContext<ThemeValue | null>(null);
